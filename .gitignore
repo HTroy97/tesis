@@ -1,3 +1,5 @@
 # .gitignore
 pyqt_design.py
 dash.py
+temperature.csv
+.vscode/

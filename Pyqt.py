@@ -151,36 +151,36 @@ class MainWindow(QtWidgets.QMainWindow):
             return
 
     def Amplify_Window(button_pressed):
-    T=QDialog()
-    layoutV=QtWidgets.QVBoxLayout(T)
+        T=QDialog()
+        layoutV=QtWidgets.QVBoxLayout(T)
             
-    if button_pressed == 1:
-        Temp_Canvas=Temperature_Canvas(parent=T,title='Temperature')
-        T.setWindowTitle('Temperatura Window')
-        toolbar=NavigationToolbar(Temp_Canvas,parent=T)
-        layoutV.addWidget(toolbar)
-        layoutV.addWidget(Temp_Canvas)
-    elif button_pressed == 2:
-        Hum_Canvas=Amplify_Canvas(parent=T,title='Humidity')
-        T.setWindowTitle('Humedad Window')
-        toolbar=NavigationToolbar(Hum_Canvas,parent=T)
-        layoutV.addWidget(toolbar)
-        layoutV.addWidget(Hum_Canvas)
-    elif button_pressed == 3:
-        Presion_Canvas=Amplify_Canvas(parent=T,title='Presión Atmosférica')
-        T.setWindowTitle('Presión  Window')
-        toolbar=NavigationToolbar(Presion_Canvas,parent=T)
-        layoutV.addWidget(toolbar)
-        layoutV.addWidget(Hum_Canvas) 
-    else:
-        Consumo_Canvas=Amplify_Canvas(parent=T,title='Consumo Eléctrico')
-        T.setWindowTitle('Consumo Eléctrico Window')  
-        toolbar=NavigationToolbar(Temp_Canvas,parent=T)
-        layoutV.addWidget(toolbar)
-        layoutV.addWidget(Hum_Canvas)
-    toolbar=NavigationToolbar(self.Canvas,parent=self.CoreWidget) 
-    T.setWindowModality(Qt.ApplicationModal)
-    T.exec_()
+        if button_pressed == 1:
+            Temp_Canvas=Temperature_Canvas(parent=T,title='Temperature')
+            T.setWindowTitle('Temperatura Window')
+            toolbar=NavigationToolbar(Temp_Canvas,parent=T)
+            layoutV.addWidget(toolbar)
+            layoutV.addWidget(Temp_Canvas)
+        elif button_pressed == 2:
+            Hum_Canvas=Amplify_Canvas(parent=T,title='Humidity')
+            T.setWindowTitle('Humedad Window')
+            toolbar=NavigationToolbar(Hum_Canvas,parent=T)
+            layoutV.addWidget(toolbar)
+            layoutV.addWidget(Hum_Canvas)
+        elif button_pressed == 3:
+            Presion_Canvas=Amplify_Canvas(parent=T,title='Presión Atmosférica')
+            T.setWindowTitle('Presión  Window')
+            toolbar=NavigationToolbar(Presion_Canvas,parent=T)
+            layoutV.addWidget(toolbar)
+            layoutV.addWidget(Presion_Canvas) 
+        else:
+            Consumo_Canvas=Amplify_Canvas(parent=T,title='Consumo Eléctrico')
+            T.setWindowTitle('Consumo Eléctrico Window')  
+            toolbar=NavigationToolbar(Consumo_Canvas,parent=T)
+            layoutV.addWidget(toolbar)
+            layoutV.addWidget(Consumo_Canvas)
+        toolbar=NavigationToolbar(self.Canvas,parent=self.CoreWidget) 
+        T.setWindowModality(Qt.ApplicationModal)
+        T.exec_()
 
 '''####################################
 ###         CANVAS CLASSES          ###
